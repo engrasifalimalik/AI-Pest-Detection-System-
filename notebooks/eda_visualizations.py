@@ -19,3 +19,13 @@ for cls in classes:
     class_counts[cls] = len(os.listdir(class_path))
 
 print(class_counts)
+
+#Plot class distribution
+plt.figure(figsize=(10,5))
+sns.barplot(x=list(class_counts.keys()), y=list(class_counts.values()))
+plt.xticks(rotation=45)
+plt.title("Class Distribution")
+plt.xlabel("Pest Classes")
+plt.ylabel("Number of Images")
+plt.show()
+
