@@ -68,3 +68,11 @@ plt.legend()
 plt.title("Image Size Distribution")
 plt.show()
 
+# Pixel value distribution
+sample_img_path = os.path.join(DATASET_PATH, classes[0], os.listdir(os.path.join(DATASET_PATH, classes[0]))[0])
+
+img = np.array(Image.open(sample_img_path))
+
+plt.hist(img.flatten(), bins=50)
+plt.title("Pixel Intensity Distribution")
+plt.show()
