@@ -20,7 +20,7 @@ for cls in classes:
 
 print(class_counts)
 
-#Plot class distribution
+# Plot class distribution
 plt.figure(figsize=(10,5))
 sns.barplot(x=list(class_counts.keys()), y=list(class_counts.values()))
 plt.xticks(rotation=45)
@@ -28,4 +28,21 @@ plt.title("Class Distribution")
 plt.xlabel("Pest Classes")
 plt.ylabel("Number of Images")
 plt.show()
+
+
+# Show sample images
+plt.figure(figsize=(12,8))
+
+for i, cls in enumerate(classes[:6]):
+    class_path = os.path.join(DATASET_PATH, cls)
+    img_name = os.listdir(class_path)[0]
+    img_path = os.path.join(class_path, img_name)
+    img = Image.open(img_path)
+    plt.subplot(2,3,i+1)
+    plt.imshow(img)
+    plt.title(cls)
+    plt.axis("off")
+plt.tight_layout()
+plt.show()
+
 
