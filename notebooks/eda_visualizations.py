@@ -76,3 +76,15 @@ img = np.array(Image.open(sample_img_path))
 plt.hist(img.flatten(), bins=50)
 plt.title("Pixel Intensity Distribution")
 plt.show()
+
+
+# Key observations
+print("""
+Key Observations:
+
+- Dataset contains multiple pest categories with varying image counts.
+- Class imbalance may exist, which can impact model performance.
+- Image sizes vary, requiring resizing before model training.
+- Pixel distribution suggests normalization is necessary.
+These observations guide preprocessing and model design decisions.
+""")
