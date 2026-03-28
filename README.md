@@ -15,7 +15,7 @@ This project develops a deep learning-based system for automatic pest detection 
 - 
 ---
 
-## 📊 Dataset
+## Dataset ##
 
 The dataset consists of pest images collected from Kaggle:
 
@@ -36,7 +36,7 @@ The dataset consists of pest images collected from Kaggle:
 
 - Convolutional Neural Network (CNN)  
 
-### 3. Evaluation
+## 3. Evaluation ##
 
 - Accuracy  
 - Precision  
@@ -46,13 +46,13 @@ The dataset consists of pest images collected from Kaggle:
 
 ---
 
-## 📈 Results
+## 4. Results ##
 
 The deep learning model demonstrates strong capability in identifying pest types from images.
 
 ---
 
-## 🧠 Research Perspective
+## Research Perspective ##
 
 This project contributes to:
 
@@ -62,7 +62,7 @@ This project contributes to:
 
 ---
 
-## 🔮 Future Work
+## Future Work ##
 
 - Real-time pest detection using mobile apps  
 - Integration with IoT-based smart farming systems  
@@ -70,7 +70,7 @@ This project contributes to:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack ##
 
 - Python  
 - TensorFlow / Keras  
@@ -103,6 +103,5 @@ ai_pest_detection/
 ├── README.md
 └── requirements.txt
 
-## 👨‍💻 Author
-
+## Author ##
 Asif Ali
