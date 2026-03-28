@@ -45,4 +45,18 @@ for i, cls in enumerate(classes[:6]):
 plt.tight_layout()
 plt.show()
 
+# Image size analysis
+widths = []
+heights = []
+for cls in classes:
+    class_path = os.path.join(DATASET_PATH, cls)
+    for img_name in os.listdir(class_path)[:20]:  # sample for speed
+        img_path = os.path.join(class_path, img_name)
+        img = Image.open(img_path)
+        w, h = img.size
+        widths.append(w)
+        heights.append(h)
+print("Average Width:", np.mean(widths))
+print("Average Height:", np.mean(heights))
+
 
