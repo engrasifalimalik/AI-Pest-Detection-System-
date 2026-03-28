@@ -7,3 +7,4 @@ After downloading, extract and place the dataset as:
 
 data/train/<class_folders>
 data/test/<class_folders>  (if applicable)
+A small sample of the dataset is included in `data/sample/` for demonstration purposes.
