@@ -12,3 +12,10 @@ classes = os.listdir(DATASET_PATH)
 print("Classes:", classes)
 print("Number of classes:", len(classes))
 
+# Count images per class
+class_counts = {}
+for cls in classes:
+    class_path = os.path.join(DATASET_PATH, cls)
+    class_counts[cls] = len(os.listdir(class_path))
+
+print(class_counts)
