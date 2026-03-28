@@ -60,3 +60,11 @@ print("Average Width:", np.mean(widths))
 print("Average Height:", np.mean(heights))
 
 
+# Plot image size distribution
+plt.figure(figsize=(10,5))
+plt.hist(widths, bins=20, alpha=0.5, label="Width")
+plt.hist(heights, bins=20, alpha=0.5, label="Height")
+plt.legend()
+plt.title("Image Size Distribution")
+plt.show()
+
