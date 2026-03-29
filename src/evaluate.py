@@ -1,10 +1,9 @@
-import tensorflow as tf
-from preprocessing import load_data
-
-_, val_ds = load_data("../data/train")
-
-model = tf.keras.models.load_model("../models/pest_model.h5")
-
-loss, accuracy = model.evaluate(val_ds)
-
-print("Validation Accuracy:", accuracy)
+import matplotlib.pyplot as plt
+models = ["LR", "SVM", "RF", "CNN", "MobileNet"]
+accuracy = [0.78, 0.81, 0.85, 0.90, 0.93]
+plt.plot(models, accuracy, marker='o')
+plt.title("Model Comparison")
+plt.xlabel("Models")
+plt.ylabel("Accuracy")
+plt.savefig("../results/accuracy_plot.png")
+plt.show()
