@@ -1,1 +1,26 @@
+cff-version: 1.2.0
+title: "AI-Based Pest Detection and Decision Support System for Precision Agriculture"
+message: "If you use this repository, please cite it as below."
+type: software
 
+authors:
+  - family-names: "Ali"
+    given-names: "Asif"
+
+identifiers:
+  - type: url
+    value: "https://github.com/engrasifalimalik/ai_pest_detection"
+
+repository-code: "https://github.com/engrasifalimalik/ai_pest_detection"
+
+keywords:
+  - Artificial Intelligence
+  - Precision Agriculture
+  - Pest Detection
+  - Deep Learning
+  - Decision Support System
+
+license: MIT
+
+version: 1.0.0
+date-released: 2026-01-01
