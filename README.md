@@ -134,6 +134,9 @@ AI_based_pest_detection_and_decision_decision_support_system_for_Agriculture/
 ├── README.md
 └── requirements.txt
 
+## Installation ##
+pip install -r requirements.txt
+
 ## 👨‍💻 Author
 Asif Ali
 
