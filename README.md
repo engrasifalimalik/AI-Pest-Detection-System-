@@ -1,4 +1,4 @@
-# AI-Based Pest Detection using Deep Learning #
+# AI-Based Pest Detection and decsion support system for precision Agriculture #
 
 ##  Overview ##
 ---
