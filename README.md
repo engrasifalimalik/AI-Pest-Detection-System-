@@ -1,90 +1,108 @@
 # AI-Based Pest Detection and decsion support system for precision Agriculture #
 
-##  Overview ##
----
-Agricultural pests significantly impact crop productivity and food security. Early detection of pests is crucial for minimizing losses and enabling timely intervention.
-This project develops a deep learning-based system for automatic pest detection using image classification techniques.
+##  Abstract ##
 
+Early detection of crop pests is critical for ensuring food security and sustainable agricultural practices. This project proposes an AI-driven system that integrates deep learning-based pest classification with a rule-based decision support mechanism to assist farmers in timely and effective pest management.
 
-##  AI-Driven Decision Support ##
+The system leverages convolutional neural networks and transfer learning to classify pest images and provides actionable recommendations based on detected pest types.
 
-Beyond classification, this system provides actionable recommendations for pest management, bridging the gap between AI predictions and real-world agricultural decision-making.
-
-This aligns with precision agriculture and smart farming initiatives.
 ---
 
-##  Objectives  ##
-- Build a deep learning model for pest classification  
-- Analyze image-based agricultural data  
-- Evaluate model performance using standard metrics  
-- Contribute toward AI-driven agricultural monitoring systems
-- 
----
+## Problem Statement ##
 
-## Dataset ##
+Traditional pest detection methods rely on manual inspection, which is time-consuming, error-prone, and not scalable.
 
-The dataset consists of pest images collected from Kaggle:
-
-- ~3150 labeled images  
-- Multiple pest categories  
-- Real-world agricultural scenarios  
+This project addresses:
+- Automated pest detection  
+- Real-time decision support  
+- AI integration in smart farming  
 
 ---
 
 ## Methodology ##
 
-### 1. Data Preprocessing
-- Image resizing  
-- Normalization  
-- Data augmentation  
+## 1. Data Analysis ##
+- Class distribution analysis  
+- Image preprocessing  
+- Data normalization  
 
-### 2. Model Development
+## 2. Model Development ##
 
-- Convolutional Neural Network (CNN)  
+## Baseline Models: ##
+- Logistic Regression  
+- Support Vector Machine  
+- Random Forest  
 
-## 3. Evaluation ##
+## Deep Learning: ##
+- Custom CNN  
+- Transfer Learning (MobileNetV2)  
+
+## 3. Evaluation Metrics ##
 
 - Accuracy  
 - Precision  
 - Recall  
 - F1 Score  
-- Confusion Matrix  
+
+## 4. Decision Support System ##
+
+A rule-based system maps detected pests to recommended actions for crop protection.
 
 ---
 
-## 4. Results ##
+## Experimental Results ##
 
-The deep learning model demonstrates strong capability in identifying pest types from images.
+- Deep learning models outperform traditional ML models  
+- Transfer learning improves generalization  
+- Class imbalance impacts performance  
 
 ---
 
-## Research Perspective ##
+## Decision Support Output ##
 
-This project contributes to:
+Example:
 
-- AI-based pest monitoring  
-- Precision agriculture  
-- Automated crop protection systems  
+Detected Pest: Aphids  
+Confidence: 92%  
+Suggested Action: Use neem oil spray and introduce biological predators  
+
+---
+
+## Research Contributions ##
+
+- Integration of AI with agricultural decision-making  
+- Comparative analysis of ML vs DL models  
+- Prototype for smart farming applications  
 
 ---
 
 ## Future Work ##
 
-- Real-time pest detection using mobile apps  
-- Integration with IoT-based smart farming systems  
-- Use of advanced architectures (Vision Transformers)  
+- Integration with IoT-based smart irrigation systems  
+- Real-time mobile deployment  
+- Multi-modal data integration (weather + soil data)  
+- Use of Vision Transformers  
 
 ---
 
-## Tech Stack ##
+## Technologies ##
 
 - Python  
 - TensorFlow / Keras  
+- Scikit-learn  
 - OpenCV  
-- NumPy  
 
 ---
-ai_pest_detection/
+
+## Limitations ##
+
+- Dataset size is limited  
+- Class imbalance affects performance  
+- Model may not generalize to unseen field conditions  
+
+## Project folders structure ##
+---
+AI_based_pest_detection_and_decision_decision_support_system_for_Agriculture/
 │
 ├── data/
 │   ├── train/
@@ -98,16 +116,21 @@ ai_pest_detection/
 │   ├── train.py
 │   ├── evaluate.py
 │   └── predict.py
+|   └── decision_support.py
 │
 ├── models/
 │   └── pest_model.h5
 │
 ├── results/
+│   ├── experiment_results.csv
 │   ├── accuracy_plot.png
 │   ├── confusion_matrix.png
 │
 ├── README.md
 └── requirements.txt
+
+## 👨‍💻 Author
+Asif Ali
 
 ## Author ##
 Asif Ali
