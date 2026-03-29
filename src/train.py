@@ -1,31 +1,30 @@
 import tensorflow as tf
-from preprocessing import load_data
+import numpy as np
+from tensorflow.keras.preprocessing import image
+from decision_support import get_recommendation
 import os
 
-train_ds, val_ds = load_data("../data/train")
+# Load model
+model = tf.keras.models.load_model("../models/pest_model.h5")
 
-model = tf.keras.Sequential([
-    tf.keras.layers.Rescaling(1./255),
-    tf.keras.layers.Conv2D(32, 3, activation='relu'),
-    tf.keras.layers.MaxPooling2D(),
+# Class names (IMPORTANT: match dataset folders)
+class_names = os.listdir("../data/train")
 
-    tf.keras.layers.Conv2D(64, 3, activation='relu'),
-    tf.keras.layers.MaxPooling2D(),
+# Load image
+img_path = "sample.jpg"
 
-    tf.keras.layers.Flatten(),
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(10, activation='softmax')  # adjust classes
-])
+img = image.load_img(img_path, target_size=(224, 224))
+img_array = image.img_to_array(img) / 255.0
+img_array = np.expand_dims(img_array, axis=0)
 
-model.compile(
-    optimizer='adam',
-    loss='sparse_categorical_crossentropy',
-    metrics=['accuracy']
-)
+# Prediction
+prediction = model.predict(img_array)
+predicted_class = class_names[np.argmax(prediction)]
+confidence = np.max(prediction)
 
-history = model.fit(train_ds, validation_data=val_ds, epochs=10)
+# Recommendation
+recommendation = get_recommendation(predicted_class)
 
-os.makedirs("../models", exist_ok=True)
-model.save("../models/pest_model.h5")
-
-print("Model trained and saved")
+print(f"Detected Pest: {predicted_class}")
+print(f"Confidence: {confidence:.2f}")
+print(f"Suggested Action: {recommendation}")
