@@ -100,6 +100,11 @@ Suggested Action: Use neem oil spray and introduce biological predators
 - Class imbalance affects performance  
 - Model may not generalize to unseen field conditions  
 
+## Citation ##
+If you use this work, please cite:
+
+Ali, A. (2026). AI-Based Pest Detection and Decision Support System for Precision Agriculture.
+
 ## Project folders structure ##
 ---
 AI_based_pest_detection_and_decision_decision_support_system_for_Agriculture/
