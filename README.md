@@ -5,6 +5,12 @@
 Agricultural pests significantly impact crop productivity and food security. Early detection of pests is crucial for minimizing losses and enabling timely intervention.
 This project develops a deep learning-based system for automatic pest detection using image classification techniques.
 
+
+##  AI-Driven Decision Support ##
+
+Beyond classification, this system provides actionable recommendations for pest management, bridging the gap between AI predictions and real-world agricultural decision-making.
+
+This aligns with precision agriculture and smart farming initiatives.
 ---
 
 ##  Objectives  ##
